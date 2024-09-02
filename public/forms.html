@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+            border:1px style gray;
+            padding: 10px;
+            width: 100px;
+            height: 50px;
+            overflow: auto;
+        }
+        .continer{
+            width: 250px;
+            height: 100px;
+            border: 1px solid gray;
+            padding: 10px;
+        }
+        .terms+span{
+            color: red;
+        }
+        .terms:checked+span{
+            color: green;
+        }
+        .terms~button{
+            display: none;
+
+        }
+        .terms:checked~button{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>select Cource</dt>
+            <dd>
+                <ul>
+                    <li><input type="checkbox" name="course" value="java">Java </li>
+                    <li><input type="checkbox" name="course" value=".NET">.NET </li>
+                    <li><input type="checkbox" name="course" value="php">php </li>
+                    <li><input type="checkbox" name="course" value="Oracle">Oracle </li>
+                </ul>
+                <button>submit</button>
+            </dd>
+        </dl>
+        <div class="continer">
+            terms of service
+        </div>
+        <dl>
+            <div>
+                <input type="checkbox" class="terms" selected><span>I Accept</span><br><br>
+                <button>submit</button>
+            </div>
+        </dl>
+        <div>
+            <dl>
+                <dt>AIR PORT</dt>
+                <dd>
+                    <select name="airport">
+                        <option>Choose Air Port</option>
+                        <option value="DEL">new Delhi-inter national Airport</option>
+                        <option value="BOM">mumbi-international airport</option>
+                        <option value="CHE">Chennai-international airport</option><br>
+                      
+                    </select>
+                </dd><br>
+                <dt>Gender</dt>
+                <dd>
+                    <select name="GEN">
+                        <option>Choose Gender</option>
+                        <option>male</option>
+                        <option>female</option>
+                        <option>Others</option>
+                    </select>
+                </dd><br>
+                <dt>products</dt>
+                <dd>
+                    <select name="product">
+                        <option>Choose the product</option>
+                        <optgroup label="Electronics" >
+                            <option>mopile phone</option>
+                            <option>Bords</option>
+                            <option>Head phone</option>
+                        </optgroup>
+                        <optgroup label="fernitue">
+                            <option>chear</option>
+                            <option>Bead</option>
+                            <option>Window</option>
+                            <option>Wood door</option>
+                        </optgroup>
+                        <optgroup label="drees">
+                            <option>mens Shope</option>
+                            <option>Womens Shopp</option>
+                            <option>Others Shope</option>
+                            <option>kids Shope</option>
+                        </optgroup>
+                    </select>
+                </dd>
+            </dl>
+            <button>submit</button>
+        </div>
+        <div>
+            <h3>Select City</h3>
+            <select name="city" size="3" multiple>
+                <option>Delhi</option>
+                <option>mumbai</option>
+                <option>Chennai</option>
+                <option>Hyd</option>
+                <option>Delhi</option>
+                <option>mumbai</option>
+                <option>Chennai</option>
+                <option>Hyd</option>
+                <option>Delhi</option>
+                <option>mumbai</option>
+                <option>Chennai</option>
+                <option>Hyd</option>
+            </select>
+            <button>submit</button>
+        </div>
+    </form>
+</body>
+</html>

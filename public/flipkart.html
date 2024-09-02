@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flipkart</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body{
+            background-color: rgb(238, 238, 238);
+        }
+        header{
+            font-family: arial;
+            display: flex;
+            background-color: rgb(255, 255, 255);
+            padding-top: 20px;
+        }
+        nav{
+            padding-left: 52%;
+            font-weight: bold;
+        }
+        .brand-title{
+            font-family: arial;
+            font-size: 20px;
+            font-weight: bold;
+            color: yellow;
+            font-style: italic;
+            padding-left: 70px;
+        } 
+        .n1{
+            font-family: arial;
+            font-size: 15px;
+            color: gray;
+            font-style: italic;
+            padding-left: 70px;
+            font-weight: bold;
+        }       
+        .n1 span{
+            color: red;
+        }
+        .bi{
+            padding: 10px;
+            padding-left: 20px;
+        }
+        section{
+            height: 5200px;
+          padding-top: 15px; 
+          padding-left: 20px;
+          padding-right: 90px;
+          font-family: arial;
+          font-weight: bold;
+        }
+        .card{
+            width: 100%;
+           height: 110px;
+            padding-top: 25px;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr;
+            font-size: 11px;
+            padding-left: 40px;
+            padding-right: 45px;   
+            background-size: cover;
+            background-color: white;
+        }
+        .banner{
+            padding: 10px;
+            padding-left: 10px;
+        }
+        .cards{
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+            grid-gap: 10px;
+        }
+        .card1,.card2,.card3,.card4,.card5,.card6{
+            height: 250px;
+            border-radius: 3%;
+           padding-top: 20px;
+            background-color: white;
+           box-shadow: 2px 6px 4px gray;
+           font-family: arial;
+           padding-bottom: 10px;
+        }
+        .card1{
+            background-image: url(images/s1.avif);
+            background-size: cover;
+            width: 210px;
+        }
+        .card2{
+            width: 210px;
+            background-image: url(images/s2.avif);
+            background-size: cover;
+        }
+        .card3{
+            width: 210px;
+            background-image: url(images/s3.avif);
+            background-size: cover;
+        }
+        .card4{
+            width: 210px;
+            background-image: url(images/s4.avif);
+            background-size: cover;
+        }
+        .card5{
+            width: 210px;
+            background-image: url(images/s5.avif);
+            background-size: cover;
+        }
+        .card6{
+            width: 220px;
+            background-image: url(images/s6.avif);
+            background-size: cover;
+
+        }
+        .rate{
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+            grid-gap: 40px;
+            font-family: arial;
+            color: black;
+        }
+        .rate1,.rate2,.rate3,.rate4,.rate5,.rate6{
+          font-family: arial;
+          font-size: 13px;
+           padding-left: 70px;          
+        }
+        .Toys{
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+            grid-gap: 10px;
+        }
+        .Toys1,.Toys2,.Toys3,.Toys4,.Toys5,.Toys6{
+            height: 250px;
+            border-radius: 3%;
+           padding-top: 20px;
+            background-color: white;
+           box-shadow: 2px 6px 4px gray;
+           font-family: arial;
+           padding-bottom: 10px;
+        }
+        .Toys1{
+            width: 210px;
+            background-image: url(images/toys1.avif);
+            background-size: cover;
+        }
+        .Toys2{
+            width: 210px;
+            background-image: url(images/toys2.avif);
+            background-size: cover;
+        }
+        .Toys3{
+            width: 210px;
+            background-image: url(images/toys3.avif);
+            background-size: cover;
+        }
+        .Toys4{
+            width: 210px;
+            background-image: url(images/toys4.avif);
+            background-size: cover;
+        }
+        .Toys5{
+            width: 210px;
+            background-image: url(images/toys6.avif);
+            background-size: cover;
+        }
+        .Toys6{
+            width: 220px;
+            background-image: url(images/s1.avif);
+            background-size: cover;
+        }
+        .box1{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            padding-top: 50px;
+        }
+        .box{
+            padding-right: 200px;
+            display: grid;
+            grid-template-columns: 12fr;
+            background-color: white;
+            width: 390px;
+        }
+        .car{
+            padding-top: 30px;
+            display: grid;
+            width: 145%;
+            padding-left: 10px;
+            grid-template-columns: 6fr 6fr;
+            grid-gap: 10px;
+        }
+        .car1,.car2{
+            height: 250px;
+            border-radius: 1%;
+           padding-top: 20px;
+            background-color: white;
+           box-shadow: 2px 6px 4px gray;
+           font-family: arial;
+           padding-bottom: 10px;        
+        }
+        .care{
+            display: grid;
+            width: 145%;
+            padding-left: 10px;
+            grid-template-columns: 6fr 6fr;
+            grid-gap: 10px;
+        }
+        .care1,.care2{
+            height: 250px;
+            border-radius: 1%;
+           padding-top: 20px;
+            background-color: white;
+           box-shadow: 2px 6px 4px gray;
+           font-family: arial;     
+        }
+        .car1{
+            background-image: url(images/cycle.avif);
+            background-size: cover;
+            font-size: 20px;
+            color: darkblue;
+            font-family: arial;
+            font-weight: bold;
+            text-align: center;
+        }
+        .car2{
+            background-image: url(images/icon.avif);
+            background-size: cover;
+            font-size: 20px;
+            color: red;
+            font-family: arial;
+            font-weight: bold;
+            text-align: center;
+        }
+        .care1{
+            background-image: url(images/cycle1.avif);
+            background-size: cover;
+            font-size: 20px;
+            color: darkblue;
+            font-family: arial;
+            font-weight: bold;
+            text-align: center;
+        }
+        .care2{
+            background-image: url(images/headphon.avif);
+            background-size: cover;
+            font-size: 20px;
+            color: darkblue;
+            font-family: arial;
+            font-weight: bold;
+            text-align: center;
+        }
+        .m1{
+            padding-top: 200px;
+        }
+        .brand-title1{
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+            padding-top: 10px;
+            padding-bottom: 30px;
+        }
+        .fation{
+            padding-top: 20px;
+            background-color: white;
+            display: grid;
+            padding-left: 10px;
+            grid-template-columns: 6fr 6fr;
+            grid-gap: 50px;
+            grid-gap: 10px;
+            width: 430px;
+        }
+        .fation1,.fation2{
+            height: 290px;
+            border-radius: 1%;
+            background-color: white;
+           box-shadow: 2px 6px 4px gray;
+           font-family: arial;   
+        }
+        .c1{
+            background-image: url(images/kids1.jpg);
+            background-size: cover;
+            height: 250px;
+            font-size: 20px;
+            color: darkblue;
+            font-family: arial;
+            font-weight: bold;
+            text-align: center;
+        }
+        .c3{
+            background-image: url(images/p1.jpg);
+            background-size: cover;
+            height: 250px;
+            font-size: 20px;
+            color: darkblue;
+            font-family: arial;
+            font-weight: bold;
+            text-align: center;
+        }
+        .c5{
+            background-image: url(images/kids2.jpg);
+            background-size: cover;
+            height: 250px;
+            font-size: 20px;
+            color: darkblue;
+            font-family: arial;
+            font-weight: bold;
+            text-align: center;
+        }
+        .c7{
+            background-image: url(images/cycle1.avif);
+            background-size: cover;
+            height: 250px;
+            font-size: 20px;
+            color: darkblue;
+            font-family: arial;
+            font-weight: bold;
+            text-align: center;
+        }
+        .c9{
+            background-image: url(images/s1.avif);
+            background-size: cover;
+            height: 250px;
+            font-size: 20px;
+            color: darkblue;
+            font-family: arial;
+            font-weight: bold;
+            text-align: center;
+        }
+        .c11{
+            background-image: url(images/s6.avif);
+            background-size: cover;
+            height: 250px;
+            font-size: 20px;
+            color: darkblue;
+            font-family: arial;
+            font-weight: bold;
+            text-align: center;
+        }
+        .h1{
+            background-image: url(images/f6.webp);
+            background-size: cover;
+            height: 250px;
+            font-size: 20px;
+            color: darkblue;
+            font-family: arial;
+            font-weight: bold;
+            text-align: center;
+        }
+        .h3{
+            background-image: url(images/f5.webp);
+            background-size: cover;
+            height: 250px;
+            font-size: 20px;
+            color: darkblue;
+            font-family: arial;
+            font-weight: bold;
+            text-align: center;
+        }
+        .h5{
+            background-image: url(images/f4.jpg);
+            background-size: cover;
+            height: 250px;
+            font-size: 20px;
+            color: darkblue;
+            font-family: arial;
+            font-weight: bold;
+            text-align: center;
+        }
+        .h7{
+            background-image: url(images/f3.jpg);
+            background-size: cover;
+            height: 250px;
+            font-size: 20px;
+            color: darkblue;
+            font-family: arial;
+            font-weight: bold;
+            text-align: center;
+        }
+        .h9{
+            background-image: url(images/f2.jpg);
+            background-size: cover;
+            height: 250px;
+            font-size: 20px;
+            color: darkblue;
+            font-family: arial;
+            font-weight: bold;
+            text-align: center;
+        }
+        .h11{
+            background-image: url(images/f1);
+            background-size: cover;
+            height: 250px;
+            font-size: 20px;
+            color: darkblue;
+            font-family: arial;
+            font-weight: bold;
+            text-align: center;
+        }
+        .fitnesskit{
+            padding-top: 20px;
+           display: flex;
+           width: 107%;
+           height: 330px;
+           background-color: white;
+        }
+        .cardes,.cardes1,.cardes2,.cardes3,.cardes4,.cardes5{
+            width: 300px;
+            padding-left:10px;
+            height: 300px;
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+            box-shadow: 5px 5px 5px gray;
+        }
+        .cardes{
+            box-shadow: 1px 1px 1px 2px  lightslategray;
+            background-image: url(images/clock.jpg);
+            background-size: cover;
+          
+        }
+        .cardes1{
+            background-image: url(images/walldecor.jpg);
+            box-shadow: 1px 1px 1px 2px  lightslategray;
+        }
+        .cardes2{
+            background-image: url(images/camara.jpg);
+            background-size: cover;
+        }
+        .cardes3{
+            box-shadow: 1px 1px 1px 2px  lightslategray;
+            background-image: url(images/shopping.jpg);
+        }
+        .cardes4{
+            box-shadow: 1px 1px 1px 2px  lightslategray;
+            background-image: url(images/camara3.jpg);
+        }
+        .cardes5{
+            box-shadow: 1px 1px 1px 2px  lightslategray;
+            background-image: url(images/flower.jpg);
+        }
+       .car12{
+            background-image: url(images/camara4.jpg);
+            font-size: 20px;
+            font-family: arial;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+       }
+       .m2{
+        padding-top: 200px;
+       } 
+       .a1{
+        color: red;
+       }
+       .car23{
+        background-image: url(images/flower.jpg);
+        background-size: cover;
+            font-size: 20px;
+            font-family: arial;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+       }
+       .care12{
+        background-image: url(images/cycle2.jpg);
+            background-size: cover;
+            font-size: 20px;
+            font-family: arial;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+       }
+       .care23{
+            background-image: url(images/headphon1.jpg);
+            background-size: cover;
+            font-size: 20px;
+            font-family: arial;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+       }
+       .story{
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 20px;
+        color: gray;
+        text-align: justify;
+       }
+        footer{
+            font-family: arial;
+            background-color: black;
+            color: white;
+            display: grid;
+            grid-template-columns:2fr 2fr 2fr 1fr 2fr 3fr ;
+        }
+        .footer-title{
+            padding: 10px;
+            color:white;
+            font-weight: bold;
+        }
+        .footer-title~span{
+            display: flex;
+        } 
+        .footer-brand-title{
+            display: grid;
+            grid-template-columns: 4fr 8fr;
+        }
+        address{
+            padding: 10px;
+            color:white;
+            font-weight: bold;
+        }
+        .footer-brand-title{
+            padding-top: 5px;
+            font-size: 19px;
+            color: white;
+        }
+        .footer-brand-title~span{
+            padding: 10px;
+        }
+        .aa1{
+            padding-top: 10px;
+            font-family: arial;
+        }
+        .footer-title1{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="brand-title">Iyyappan</span><br>
+            <span class="n1">Electricals <span>Plus<span></span></spn></span>
+        </div>
+        <nav>
+            <span class="bi bi-shop">Become  Seller</span>
+            <span class="bi bi-person">Sign in<span class="bi bi-chevron-down"></span></span>
+            <span class="bi bi-cart3">Cart</span>
+            <span class="bi bi-three-dots-vertical"></span>
+        </nav>
+    </header>
+    <section>
+        <div class="card">
+            <span><img src="images/mini1"><br>Grocery</span>
+            <span><img src="images/mini2"><br>Mobiles</span>
+            <span><img src="images/mini3"><br>Fashion<span class="bi bi-chevron-down"></span></span>
+            <span><img src="images/mini4"><br>Electronics<span class="bi bi-chevron-down"></span></span>
+            <span><img src="images/mini5"><br>Home & Furniture<span class="bi bi-chevron-down"></span></span>
+            <span><img src="images/mini6"><br>Appliances</span>
+            <span><img src="images/mini7"><br>Travel</span>
+            <span><img src="images/mini8"><br>Top Offers</span>
+            <span><img src="images/mini9.webp"><br>Beaty, Toys & More<span class="bi bi-chevron-down"></span></span>
+            <span><img src="images/mini10"><br>Two Wheelers<span class="bi bi-chevron-down"></span></span>
+        </div>
+        <main>
+            <div class="banner">
+                <img src="images/banner1.webp" width="1300px" height="290">
+            </div>
+            <div>
+                <h2>Best Of Electronics</h2>
+            </div>
+            <div class="cards">
+                <div class="card1">
+                </div>
+                <div class="card2">
+                </div>
+                <div class="card3">
+                </div>
+                <div class="card4">
+                </div>
+                <div class="card5">
+                </div>
+                <div class="card6" >
+                </div>
+            </div>
+            <div class="rate">
+                <div class="rate1">
+                   <h3> HeadPhones</h3>
+                   <span>From &#8377;399</span> 
+                </div>
+                <div class="rate2">
+                    <h3> HeadPhones</h3>
+                   <span>From &#8377;399</span>
+                </div>
+                <div class="rate3">
+                    <h3> HeadPhones</h3>
+                   <span>From &#8377;399</span>
+                </div>
+                <div class="rate4">
+                    <h3> HeadPhones</h3>
+                   <span>From &#8377;999</span>
+                </div>
+                <div class="rate5">
+                   <h3>HeadPhones</h3>
+                   <span>From &#8377;399</span>
+                </div>
+                <div class="rate6">
+                   <h3>HeadPhones</h3>
+                   <span>From &#8377;399</span>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h2>Beauty, food,Toys & more</h2>
+                </div>
+                <div class="Toys">
+                    <div class="Toys1">
+                    </div>
+                    <div class="Toys2">
+                    </div>
+                    <div class="Toys3">
+                    </div>
+                    <div class="Toys4">
+                    </div>
+                    <div class="Toys5">
+                    </div>
+                    <div class="Toys6" >
+                    </div>
+                </div>
+                <div class="rate">
+                    <div class="rate1">
+                       <h3> HeadPhones</h3>
+                       <span>From &#8377;399</span> 
+                    </div>
+                    <div class="rate2">
+                        <h3> HeadPhones</h3>
+                       <span>From &#8377;399</span>
+                    </div>
+                    <div class="rate3">
+                        <h3> HeadPhones</h3>
+                       <span>From &#8377;399</span>
+                    </div>
+                    <div class="rate4">
+                        <h3> HeadPhones</h3>
+                       <span>From &#8377;999</span>
+                    </div>
+                    <div class="rate5">
+                       <h3>HeadPhones</h3>
+                       <span>From &#8377;399</span>
+                    </div>
+                    <div class="rate6">
+                       <h3>HeadPhones</h3>
+                       <span>From &#8377;399</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box1">
+                <div class="box">
+                    <h2>End of Season Bestsellers</h2>
+                    <div class="car">
+                        <div class="car1">
+                            <div class="m1">
+                                bycycle
+                            </div>
+                            <div>
+                                <span>more &#8377;599</span>
+                            </div>
+                        </div>
+                        <div class="car2">
+                            <div class="m1">
+                                Icons
+                            </div> 
+                        </div>
+                        <div>
+                            <h1></h1>
+                        </div>
+                    </div>
+                    <div class="care">
+                        <div class="care1">
+                            <div class="m1">
+                               bycycle
+                            </div>
+                            <div>
+                                <span>more &#8377;599</span>
+                            </div>
+                        </div>
+                        <div class="care2">
+                            <div class="m1">
+                                HeadPhons
+                            </div>
+                        </div>
+                        <div>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="images/p1.jpg" width="116%" height="700px">
+                </div>
+            </div>
+        </main>
+        <h2>Top picks for you!</h2>
+        <div class="brand-title1">
+            <div class="fation">
+                <div class="fation1">
+                    <div class="c1">
+                        <div class="l1">
+                            
+                        </div>
+                        <div>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="c2">
+                        <div class="l1">
+                            
+                        </div> 
+                    </div>
+                    <div>
+                        <h1></h1>
+                    </div>
+                </div>
+                <div class="fation2">
+                    <div class="c3">
+                        <div class="l1">
+                           
+                        </div>
+                        <div>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="c4">
+                        <div class="l1">
+                            
+                        </div>
+                    </div>
+                    <div>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="fation">
+                <div class="fation1">
+                    <div class="c5">
+                        <div class="l1">
+                            
+                        </div>
+                        <div>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="c6">
+                        <div class="l1">
+                            
+                        </div> 
+                    </div>
+                    <div>
+                        <h1></h1>
+                    </div>
+                </div>
+                <div class="fation2">
+                    <div class="c7">
+                        <div class="l1">
+                           
+                        </div>
+                        <div>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="c8">
+                        <div class="l1">
+                            
+                        </div>
+                    </div>
+                    <div>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="fation">
+                <div class="fation1">
+                    <div class="c9">
+                        <div class="l1">
+                            
+                        </div>
+                        <div>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="c10">
+                        <div class="l1">
+                            
+                        </div> 
+                    </div>
+                    <div>
+                        <h1></h1>
+                    </div>
+                </div>
+                <div class="fation2">
+                    <div class="c11">
+                        <div class="l1">
+                           
+                        </div>
+                        <div>
+                            <span</span>
+                        </div>
+                    </div>
+                    <div class="c12">
+                        <div class="l1">
+                           
+                        </div>
+                    </div>
+                    <div>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Sports, Healthcare & more</h2>
+        <div class="brand-title1">
+            <div class="fation">
+                <div class="fation1">
+                    <div class="h1">
+                        <div class="l1">
+                           
+                        </div>
+                        <div>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="c2">
+                        <div class="l1">
+                            
+                        </div> 
+                    </div>
+                    <div>
+                        <h1></h1>
+                    </div>
+                </div>
+                <div class="fation2">
+                    <div class="h3">
+                        <div class="l1">
+                           
+                        </div>
+                        <div>
+                            <span> </span>
+                        </div>
+                    </div>
+                    <div class="c4">
+                        <div class="l1">
+                            
+                        </div>
+                    </div>
+                    <div>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="fation">
+                <div class="fation1">
+                    <div class="h5">
+                        <div class="l1">
+                            
+                        </div>
+                        <div>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="c6">
+                        <div class="l1">
+                            
+                        </div> 
+                    </div>
+                    <div>
+                        <h1></h1>
+                    </div>
+                </div>
+                <div class="fation2">
+                    <div class="h7">
+                        <div class="l1">
+                           
+                        </div>
+                        <div>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="c8">
+                        <div class="l1">
+                            
+                        </div>
+                    </div>
+                    <div>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="fation">
+                <div class="fation1">
+                    <div class="h9">
+                        <div class="l1">
+                            
+                        </div>
+                        <div>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="c10">
+                        <div class="l1">
+                                
+                        </div> 
+                    </div>
+                    <div>
+                        <h1></h1>
+                    </div>
+                </div>
+                <div class="fation2">
+                    <div class="h11">
+                        <div class="l1">
+                           
+                        </div>
+                        <div>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="c12">
+                        <div class="l1">
+                            
+                        </div>
+                    </div>
+                    <div>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Home & Travel Essentials</h2>
+        <div class="fitnesskit">
+            <div class="cardes">
+                <div>
+
+                </div>
+            </div>
+            <div class="cardes1">
+                <div>
+
+                </div>
+            </div>
+            <div class="cardes2">
+                <div>
+
+                </div>
+            </div>
+            <div class="cardes3">
+                <div>
+
+                </div>
+            </div>
+            <div class="cardes4">
+                <div>
+
+                </div>
+            </div>
+            <div class="cardes5">
+                <div>
+
+                </div>
+            </div>
+        </div>
+        <h2>Most Shopped on Fk</h2>
+        <div class="box1">
+            <div class="box">
+                <h2>End of Season Bestsellers</h2>
+                <div class="car">
+                    <div class="car12">
+                        <div class="m2">
+                            Camera
+                        </div>
+                        <div>
+                           <div>more<span class="a1"> &#8377;5,999</span></div>
+                        </div>
+                    </div>
+                    <div class="car23">
+                        <div class="m1">
+                            flower
+                        </div> <div>more<span class="a1"> &#8377;1,499</span></div>
+                    </div>
+                    <div>
+                        <h1></h1>
+                    </div>
+                </div>
+                <div class="care">
+                    <div class="care12">
+                        <div class="m1">
+                           Cycle
+                        </div>
+                        <div>
+                           <div>more<span class="a1"> &#8377;9,999</span></div> 
+                        </div>
+                    </div>
+                    <div class="care23">
+                        <div class="m1">
+                            HeadPhons
+                        </div><div>more<span class="a1"> &#8377;2,999</span></div>
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="images/cycle1.avif" width="116%" height="700px">
+            </div>
+        </div>
+        <div >
+            <h2>Top Stories : brand Directory</h2>
+            <div class="story">
+                   <p><h4>MOST SEARCHED FOR ON FLIPKART:</h4><P>one pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop | Moto Edge 40 |  yffuyhbkjnlkn|
+                    ne pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop | Moto Edge 40 | Bounce Infinity E1 | buy labtop on EMI | Infinix ZeroBook
+                    ne pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop | Moto Edge 40 | Bounce Infinity E1 | buy labtop on EMI | Infinix ZeroBook
+                    5G|Fresh Flower Bouquet | Electric Cycle |MOST SEARCHED FOR ON FLIPKART:one pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop |
+                    5G|Fresh Flower Bouquet | Electric Cycle |MOST SEARCHED FOR ON FLIPKART:one pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop |
+                    5G|Fresh Flower Bouquet | Electric Cycle |MOST SEARCHED FOR ON FLIPKART:one pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop |
+                    5G|Fresh Flower Bouquet | Electric Cycle </p>|MOST SEARCHED FOR ON FLIPKART:one pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop |
+                    5G|Fresh Flower Bouquet | Electric Cycle |MOST SEARCHED FOR ON FLIPKART:one pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop |
+                    ne pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop | Moto Edge 40 | Bounce Infinity E1 | buy labtop on EMI | Infinix ZeroBook
+                    ne pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop | Moto Edge 40 | Bounce Infinity E1 | buy labtop on EMI | Infinix ZeroBook
+                    5G|Fresh Flower Bouquet | Electric Cycle |MOST SEARCHED FOR ON FLIPKART:one pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop |
+                    5G|Fresh Flower Bouquet | Electric Cycle |MOST SEARCHED FOR ON FLIPKART:one pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop |
+                    5G|Fresh Flower Bouquet | Electric Cycle |MOST SEARCHED FOR ON FLIPKART:one pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop |
+                    5G|Fresh Flower Bouquet | Electric Cycle </p>|MOST SEARCHED FOR ON FLIPKART:one pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop |
+                    5G|Fresh Flower Bouquet | Electric Cycle |MOST SEARCHED FOR ON FLIPKART:one pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop |
+                   Electric Cycle  ashion EOSS Sale | Trend Stope | flipka Elite Credite card | 5G Mobile Phones|Primebook labtop | Moto Edge 40 | Bounce Infin    
+                   ne pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop | Moto Edge 40 | Bounce Infinity E1 | buy labtop on EMI | Infinix ZeroBook
+                    ne pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop | Moto Edge 40 | Bounce Infinity E1 | buy labtop on EMI | Infinix ZeroBook
+                    5G|Fresh Flower Bouquet | Electric Cycle |MOST SEARCHED FOR ON FLIPKART:one pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop |
+                    5G|Fresh Flower Bouquet | Electric Cycle |MOST SEARCHED FOR ON FLIPKART:one pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop |
+                    5G|Fresh Flower Bouquet | Electric Cycle |MOST SEARCHED FOR ON FLIPKART:one pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop |
+                    5G|Fresh Flower Bouquet | Electric Cycle </p>|MOST SEARCHED FOR ON FLIPKART:one pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop |
+                    5G|Fresh Flower Bouquet | Electric Cycle |MOST SEARCHED FOR ON FLIPKART:one pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop |
+                   Electric Cycle  ashion EOSS Sale | Trend Stope | flipka Elite Credite card | 5G Mobile Phones|Primebook labtop | Moto Edge 40 | Bounce Infin    
+                   ne pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop | Moto Edge 40 | Bounce Infinity E1 | buy labtop on EMI | Infinix ZeroBook
+                    ne pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop | Moto Edge 40 | Bounce Infinity E1 | buy labtop on EMI | Infinix ZeroBook
+                    5G|Fresh Flower Bouquet | Electric Cycle |MOST SEARCHED FOR ON FLIPKART:one pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop |
+                    5G|Fresh Flower Bouquet | Electric Cycle |MOST SEARCHED FOR ON FLIPKART:one pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop |
+                    5G|Fresh Flower Bouquet | Electric Cycle |MOST SEARCHED FOR ON FLIPKART:one pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop |
+                    5G|Fresh Flower Bouquet | Electric Cycle </p>|MOST SEARCHED FOR ON FLIPKART:one pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop |
+                    5G|Fresh Flower Bouquet | Electric Cycle |MOST SEARCHED FOR ON FLIPKART:one pieces|fashion EOSS Sale | Trend Stope | flipkart Axis Bank Super Elite Credite card | 5G Mobile Phones|Primebook labtop |
+                   Electric Cycle  ashion EOSS Sale | Trend Stope | flipka Elite Credite card | 5G Mobile Phones|Primebook labtop | Moto Edge 40 | Bounce Infin    
+                   Electric Cycle  ashion EOSS Sale | Trend Stope | flipka Elite Credite card | 5G Mobile Phones|Primebook labtop | Moto Edge 40 | Bounce Infin    
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div>
+           <div class="footer-title">ABOUT</div>
+           <span>Contact Us</span>
+           <span>About Us</span>
+           <span>Careers</span>
+           <span>Flipkart Stories</span>
+           <span>Press</span>
+           <span>Flipkart Wholesale</span>
+           <span>Corporate Information</span>
+        </div>
+        <div>
+            <div class="footer-title">HELP</div>
+            <span>Payments</span>
+            <span>Shipping</span>
+            <span>Cancellation & Returns</span>
+            <span>FAQ</span>
+            <span>Report Infringement</span>
+        </div>
+        <div>
+           <div class="footer-title">CONSUMER</div>
+           <span>POLICY</span>
+           <span>Return Policy</span>
+           <span>Terms Of Use</span>
+           <span>Security</span>
+           <span>Privacy</span>
+           <span>Sitemap</span>
+           <span>Grievance Redressal</span>
+           <span> EPR Compliance</span>
+            </div>
+        <div>
+            <div class="footer-title">SOCIAL</div>
+            <span>Facebook</span>
+            <span>Twitter</span>
+            <span>YouTube</span>
+        </div>
+        <div class="aa1">
+           <div cass="footer-title1">Mail Us:</div>
+           <span>Flipkart Internet Private Limited,</span>
+           <span>Buildings Alyssa, Begonia &</span>
+           <span>Clove Embassy Tech Village,</span>
+           <span>Outer Ring Road, Devarabeesanahalli Village,</span>
+           <span>Bengaluru, 560103,</span>
+           <span> Karnataka, India</span>
+       </div>
+       <address>
+          <div>
+              <div class="footer-brand-title">Registered Office Address:</div>
+              <span>Flipkart Internet Private Limited,</span>
+              <span>Buildings Alyssa, Begonia &</span>
+              <span>Clove Embassy Tech Village,</span>
+              <span>Outer Ring Road, Devarabeesanahalli Village,</span>
+              <span>Bengaluru, 560103,</span>
+              <span>Karnataka, India</span>
+              <span>CIN : U51109KA2012PTC066107</span>
+              <span>Telephone: 044-45614700</span>
+           </div>
+       </address>
+    </foote>
+</body>
+</html>
+   
