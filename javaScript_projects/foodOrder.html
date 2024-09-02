@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <a href="#" class="logo">
+            <ion-icon name="fast-food"></ion-icon>
+             Iyyappan Food Court</a>
+            <div class="box">
+                <div class="cart-count">5</div>
+                <ion-icon name="cart" id="cart-icon"></ion-icon>
+            </div>
+            <div class="cart">
+                <div class="cart-title">Cart items</div>
+                <div class="cart-content">      
+                    <div class="cart-box">
+                        <img src="../public/images/idly.jpg" class="cart-img">
+                        <div class="detaile-box">
+                           <div class="card-food-title">idly</div>
+                           <div class="price-box">
+                               <div class="card-price">rs.70</div>
+                               <div class="card-amt">rs.72</div>
+                            </div>
+                           <input type="number" value="1" class="cart-quantity">
+                        </div> 
+                       <ion-icon name="trash" class="cart-remove"></ion-icon>
+                    </div>
+                    <div class="cart-box">
+                        <img src="../public/images/dhosa.jpg" class="cart-img">
+                        <div class="detaile-box">
+                           <div class="card-food-title">dhosa</div>
+                           <div class="price-box">
+                               <div class="card-price"></div>
+                               <div class="card-amt">rs.72</div>
+                            </div>
+                           <input type="number" value="1" class="cart-quantity">
+                        </div> 
+                       <ion-icon name="trash" class="cart-remove"></ion-icon>
+                    </div>
+                    <div class="cart-box">
+                        <img src="../public/images/puri.jpg" class="cart-img">
+                        <div class="detaile-box">
+                           <div class="card-food-title"></div>
+                           <div class="price-box">
+                               <div class="card-price"></div>
+                               <div class="card-amt">rs.72</div>
+                            </div>
+                           <input type="number" value="1" class="cart-quantity">
+                        </div> 
+                       <ion-icon name="trash" class="cart-remove"></ion-icon>
+                    </div>
+                    <div class="cart-box">
+                        <img src="../public/images/pongal.jpg" class="cart-img">
+                        <div class="detaile-box">
+                           <div class="price-box">
+                               <div class="card-price"></div>
+                               <div class="card-amt">rs.72</div>
+                            </div>
+                           <input type="number" value="1" class="cart-quantity">
+                        </div> 
+                       <ion-icon name="trash" class="cart-remove"></ion-icon>
+                    </div>           
+                   <div class="cart-box">
+                        <img src="../public/images/pongal.jpg" class="cart-img">
+                        <div class="detaile-box">
+                           <div class="card-food-title"></div>
+                           <div class="price-box">
+                               <div class="card-price"></div>
+                               <div class="card-amt">rs.72</div>
+                            </div>
+                           <input type="number" value="1" class="cart-quantity">
+                        </div> 
+                       <ion-icon name="trash" class="cart-remove"></ion-icon>
+                    </div>
+                </div>               
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">Rs.0</div>
+                </div>
+                <button class="btn-buy">place Order</button>
+                <ion-icon name="close" id="cart-close"></ion-icon>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h2 class="title">Discover the best Food</h2>
+        <div class="shop-contant">
+            <div class="food-box">
+                <div class="pic">
+                    <img src="../public/images/tamil food.jfif" class="food-img"></img>
+                </div>
+                <h2 class="food-title">Tamil food</h2>
+                <span class="food-price">&#8377;70</span>
+                <ion-icon name="cart" class="add-cart">
+                </ion-icon>
+            </div>
+            <div class="food-box">
+                <div class="pic">
+                    <img src="../public/images/north food.jfif" class="food-img"></img>
+                </div>
+                <h2 class="food-title">thali</h2>
+                <span class="food-price">&#8377;40</span>
+                <ion-icon name="cart" class="add-cart">
+                </ion-icon>
+            </div>
+            <div class="food-box">
+                <div class="pic">
+                    <img src="../public/images/lunch.jfif" class="food-img"></img>
+                </div>
+                <h2 class="food-title">meals</h2>
+                <span class="food-price">&#8377;50</span>
+                <ion-icon name="cart" class="add-cart">
+                </ion-icon>
+            </div>
+            <div class="food-box">
+                <div class="pic">
+                    <img src="../public/images/pongal.jpg" class="food-img"></img>
+                </div>
+                <h2 class="food-title">pongal</h2>
+                <span class="food-price">&#8377;30</span>
+                <ion-icon name="cart" class="add-cart">
+                </ion-icon>
+            </div>
+            <div class="food-box">
+                <div class="pic">
+                    <img src="../public/images/dhosa.jpg" class="food-img"></img>
+                </div>
+                <h2 class="food-title">dhosa</h2>
+                <span class="food-price">&#8377;90</span>
+                <ion-icon name="cart" class="add-cart">
+                </ion-icon>
+            </div>
+            <div class="food-box">
+                <div class="pic">
+                    <img src="../public/images/dinner.jfif" class="food-img"></img>
+                </div>
+                <h2 class="food-title">full meals</h2>
+                <span class="food-price">&#8377;40</span>
+                <ion-icon name="cart" class="add-cart">
+                </ion-icon>
+            </div>
+            <div class="food-box">
+                <div class="pic">
+                    <img src="../public/images/puli.jfif" class="food-img"></img>
+                </div>
+                <h2 class="food-title">puli rice</h2>
+                <span class="food-price">&#8377;40</span>
+                <ion-icon name="cart" class="add-cart">
+                </ion-icon>
+            </div>
+            <div class="food-box">
+                <div class="pic">
+                    <img src="../public/images/puri.jpg" class="food-img"></img>
+                </div>
+                <h2 class="food-title">masala puri</h2>
+                <span class="food-price">&#8377;40</span>
+                <ion-icon name="cart" class="add-cart">
+                </ion-icon>
+            </div>
+            <div class="food-box">
+                <div class="pic">
+                    <img src="../public/images/idly.jpg" class="food-img"></img>
+                </div>
+                <h2 class="food-title">Idly</h2>
+                <span class="food-price">&#8377;40</span>
+                <ion-icon name="cart" class="add-cart">
+                </ion-icon>
+            </div>
+        </div>
+    </div>
+    <script src="../javaScript_projects/Script.js"></script>
+</body>
+</html>
