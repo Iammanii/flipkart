@@ -68,8 +68,8 @@ function addcart()
         element.innerHTML=cartElement;
         let basket =document.querySelector('.cart-content')
         basket.append(element);
-    }
-    /* btn.classList.add('cart-active');
+    } 
+     btn.classList.add('cart-active');
     let food =this.parentElement;
     let title=food.querySelector('.food-title').
     innerHTML;
@@ -81,8 +81,8 @@ function addcart()
     let element=document.createElement('div');
     element.innerHTML=cartElement;
     let basket =document.querySelector('.cart-content')
-    basket.append(element); */
-}
+    basket.append(element); 
+ }
 function createcartprduct(title,price,image)
 {
   return`
@@ -99,16 +99,16 @@ function createcartprduct(title,price,image)
          <ion-icon name="trash" class="cart-remove"></ion-icon>
     </div>
   `
-}
+} 
 //product item add event
 
-/* function additem() {
+function additem() {
     addCartitem.addEventListener('click',()=>{
         addd.classList.add('cart-active');
     });
 }
- */
-/* addCartitem.addEventListener('click',() =>{
+ 
+ addCartitem.addEventListener('click',() =>{
     btn.classList.add('cart-active');
     if(confirm('your product will be added'))
     {
@@ -118,4 +118,30 @@ function createcartprduct(title,price,image)
         });
     
     }
-}); */
+}); document.addEventListener('DOMContentLoaded', () => {
+    // Animation for progress bars
+    const progressBars = document.querySelectorAll('.progress-bar');
+
+    window.addEventListener('scroll', () => {
+        progressBars.forEach(bar => {
+            const value = bar.getAttribute('data-percent');
+            const position = bar.getBoundingClientRect().top;
+            if (position < window.innerHeight) {
+                bar.style.width = value;
+            }
+        });
+    });
+
+    // Smooth scroll for navigation
+    const links = document.querySelectorAll('nav ul li a');
+    for (const link of links) {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            window.scrollTo({
+                top: target.offsetTop,
+                behavior: 'smooth'
+            });
+        });
+    }
+});

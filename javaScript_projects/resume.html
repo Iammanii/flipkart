@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Iyyappan's Portfolio - Java Developer">
+    <title>Iyyappan | Java Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script> <!-- GSAP for Animations -->
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f7f7f7;
+    color: #333;
+}
+.aboutme{
+    font-size: 18px;
+    font-family: Arial;
+    font-weight: 500;
+    color: gray;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+nav {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    text-align: center;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+header {
+    height: 95vh;
+    background: linear-gradient(45deg, #3498db, #e74c3c);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro h1 {
+    font-size: 4rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.intro p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #2ecc71;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.btn:hover {
+    background: #27ae60;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #3498db;
+}
+
+.skills-container, .projects-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    animation: slideIn 2s ease-in-out;
+}
+
+.skill, .project.card {
+    width: 45%;
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project.card:hover {
+    transform: scale(1.05);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 15px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #3498db;
+    width: 0;
+    transition: width 2s ease-in-out;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c3e50;
+    color: white;
+}
+
+/* Background Animations */
+.background-animation .bubble {
+    position: fixed;
+}
+h3{
+padding-top: 20px;
+margin-bottom: 10px;
+color: #3498db;
+}
+h5{
+font-family: Arial;
+color: lightslategray;
+font-size: 18px;
+margin-bottom: 10px;
+}
+.ed{
+font-family: 'Times New Roman', Times, serif;
+font-weight: bold;
+margin-bottom: 10px;
+color: gray;
+}
+.ed1{
+ font-style: italic;
+ margin-bottom: 10px;
+}
+.year{
+font-weight: bolder;
+}
+.mark{
+background-color: yellow
+}
+.pstyle{
+    background: unset;
+}
+.section{
+    display: grid;
+    grid-template-columns: 22fr 10fr;
+    background-color: lightgrey;
+    padding: 10px;
+    padding-right: 80px;
+}
+.social{
+        background-color: rgb(226, 223, 223);
+        padding: 30px;
+        padding-top: 40px;
+        padding-left: 50px;
+        text-align: right;
+        font-size: 19px;
+        justify-content: space-between;
+        
+    }
+    .bi-youtube{
+        padding: 5px;
+        border-radius: 20px;
+        color:red;
+        background-color: white;
+        margin-left: 10px;
+        font-size: 25px;
+    }
+    .bi-youtube:hover{
+        transition: 2s;
+        background-color:aqua;
+    }
+    .bi-instagram{
+        padding: 5px;
+        border-radius: 25px;
+        color: rgba(255, 111, 54, 0.966);
+        background-color: white;
+        margin-left: 10px;
+        font-size: 25px;
+        border-radius: 10px;
+    }
+    .bi-instagram:hover{
+        transition: 2s;
+        background-color:aqua;
+    }
+    .bi-telegram{
+        background-color:white;
+        margin-left: 10px;
+        font-size: 25px;
+        padding: 5px;
+        border-radius: 20px;
+    }
+    .bi-telegram:hover{
+        transition: 2s;
+        background-color:aqua;
+    }
+    .bi-whatsapp{
+        width: 100px;
+        height: 50vh;
+        background-color: white;
+        padding: 5px;
+        border-radius: 20px;
+        margin-left: 10px;
+        font-size: 25px;
+    }
+    .bi-whatsapp:hover{
+        transition: 2s;
+        background-color:aqua;
+    }
+    .bi-facebook{
+        padding: 5px;
+        border-radius: 20px;
+        background-color: white;
+        color: rgb(27, 175, 243);
+        font-size: 25px;
+    }
+    .bi-facebook:hover{
+        transition: 2s;
+        background-color:aqua;
+    }
+   .section1{
+    height: 100vh;
+   }
+   .name{
+    padding-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+
+   }
+   .name:hover{
+    transition: 2s;
+    color: cyan;
+   }
+   .java{
+    padding-top: 10px;
+    font-family: Arial;
+    color:aqua;
+   }
+   .section2{
+   display: grid;
+   grid-template-columns: 18fr 14fr;
+   }
+   .pro{
+    padding: 70px;
+    margin-left: 30px;
+   }
+   .projects-container{
+    width: 390px;
+   }
+   
+</style>
+<body>
+
+    <!-- Colorful Animated Background -->
+    <div class="background-animation">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <!-- Header with Navigation -->
+    <header id="main-header" >
+       
+        <div class="intro">
+            <h1 class="name">Iyyappan Ramasamy</h1>
+            <p class="java">Java Developer & Web Enthusiast</p>
+            <p><img src="../public/images/IMG_20240802_184843_469.jpg" style="margin-left: 50px; margin-right: 50px; align-items: center; width: 40%; border-radius: 150px;"></p>
+            <span>
+                <ul>
+                    <a href="https://www.facebook.com/r.iyyappan.566"><span class="bi bi-facebook"></span></a>
+                    <a href="https://www.instagram.com/iam__manii__/"><span class="bi bi-instagram"></span></a>
+                    <a href="https://www.linkedin.com/in/iyyappan-r-b33681279/"><span class="bi bi-telegram" style="color: #27ae60;"></span></a>
+                   <a href="https://www.youtube.com/"><span class="bi bi-youtube" ></span></a>
+                   <a href="https://web.whatsapp.com/"><span class="bi bi-whatsapp" style="color: aqua;"></span></a>
+                </ul>
+            </span>
+        </div>
+        <nav style="margin-top: 50px;" class="pstyle">
+            <ul >
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <marquee scrollamount="15" alternatve>
+            <span style="color: aqua; font-size: 35px; background-color: white; animation: backwards; padding: 20px; padding-bottom: 40px; font-family: 'Times New Roman', Times, serif;">Hello, I'm Iyyappan, a passionate Java Developer with a keen interest in designing and developing high-performance web applications. I love integrating creative solutions and modern development practices to bring ideas to life.</span>
+        </marquee>
+    </header>
+    <!-- About Section -->
+    <section id="about" class="section" style=" background: linear-gradient(45deg, #3498db, #7adb4d);">
+        <div class="container" style="background-color: white; margin-top: 30px; margin-bottom: 30px; text-align: left; border-style: double; border-width: 5px; border-radius: 20px; border-color: white">
+            <h2 style="margin-right: 40px;">About Me</h2>
+            <p class="aboutme">Hello, I'm Iyyappan, a passionate Java Developer with a keen interest in designing and developing high-performance web applications. I love integrating creative solutions and modern development practices to bring ideas to life.
+           <hr>
+            <h3>E D U C A T I O N</h3>
+            <h5>GOVERNMENT HIGHER SECONDARY SCHOOL</h5>
+            <div class="ed">SECONDARY SCHOOL LEAVING CERTIFICATE</div>
+            <div class="ed1"><span class="year">2015-2016</span> WITH <span class="mark">63.54%</span></div>
+            <h5>GOVERNMENT HIGHER SECONDARY SCHOOL</h5>
+            <div class="ed">HIGHER SECONDARY CERTIFICATE</div>
+            <div class="ed1"><span class="year">2017-2018</span> WITH <span class="mark">53.73&</span></div>
+            <hr>    
+            <h3>A N N A  U N I V E R S I T Y</h3>
+            <h5>TIRUMALA POLYTECNIC COLLEGE -TIRUVANNAMALAI</h5>
+            <div class="ed">ELECTRICAL AND ELECTRONICS ENGINEERING</div>
+            <div class="ed1"><span class="year">2018-2020</span> WITH <span class="mark">78%</span></div>
+           
+            <h5>SKP ENGINEERING COLLEGE -TIRUVANNAMALAI</h5>
+            <div class="ed">ELECTRICAL AND ELECTRONICS ENGINEERING</div>
+            <div class="ed1"><span class="year">2021-2024</span> WITH <span class="mark"> 8.5 CGPA</span></div>
+            </p>
+        </div>
+        <div>
+            <img src="../public/images/IMG_20240802_184843_469.jpg" style="margin-top: 45%;border-radius: 200px; border-style: double; border-width: 10px; border-color: white; margin-right: px;">
+        </div>
+    </section>
+    <hr>
+    <!-- Skills Section with Animated Skill Bars -->
+    <section id="skills" class="section1" style=" background: linear-gradient(45deg, #f1636f, #61e6c9);">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill" style="background-color: lightblue;">
+                    <h3 style="color: lightseagreen;">Core Java</h3>
+                    <progress max="100" value="70"></progress>
+                </div>
+                <div class="skill" style="background-color: lightblue;">
+                    <h3 style="color: lightseagreen;">Adv Java</h3>
+                    <progress max="100%"></progress>
+                </div>
+                <div class="skill" style="background-color: lightblue;">
+                    <h3 style="color: lightseagreen;">SQL</h3>
+                    <progress max="100%"></progress>
+                </div>
+                <div class="skill" style="background-color: lightblue;">
+                    <h3 style="color: lightseagreen;">HTML/CSS</h3>
+                    <progress max="100%"></progress>
+                </div>
+                <div class="skill" style="background-color: lightblue;">
+                    <h3 style="color: lightseagreen;">JavaScript</h3>
+                    <progress max="100%"></progress>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section with Hover Effects -->
+    <section id="projects" class="section2">
+        <div class="pro">
+           <div class="imge1">
+              <marquee behavior="20"><img src="../public/images/full.jfif" width="100px" height="300px"></marquee>
+           </div>
+           <div class="imge2">
+            <marquee behavior="20" direction="right"><img src="../public/images/web.jfif" width="100px" height="300px"></marquee>
+         </div>
+         <div class="imge3">
+            <marquee behavior="20" direction="left"><img src="../public/images/cycle.avif" width="100px" height="300px"></marquee>
+            
+         </div>
+         <div class="imge4">
+            <marquee behavior="20" direction="right"><img src="../public/images/cycle2.jpg" width="100px" height="300px"></marquee>
+            
+         </div>
+        </div>
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project card" >
+                    <h3>Online Food Oder</h3>
+                    <p style="margin-bottom: 15px; font-size: 15px; font-weight: bold; color: gray; ">A dynamic web application built using HTML,CSS,JS</p>
+                    <a href="http://192.168.1.8:5501/javaScript_projects/foodOrder.html" class="btn">View Project</a>
+                </div>
+                
+                <div class="project card">
+                    <h3>Flipcart booking Shope</h3>
+                    <p style="margin-bottom: 15px; font-size: 15px; font-weight: bold; color: gray; ">A dynamic web application built using HTML,CSS,JS</p>
+                    <a href="http://192.168.1.8:5501/public/flipkart.html" class="btn">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with CTA -->
+    <section id="contact" class="section" style=" background: linear-gradient(45deg, #3498db, #002863);">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:iyyappan@example.com">iyyappan@example.com</a></p>
+            <p>LinkedIn: <a href="#">LinkedIn Profile</a></p>
+        </div>
+    </section>
+    <div class="social" style=" background: linear-gradient(45deg, #3498db, #e74c3c);">
+        <div>
+            <a href="https://www.facebook.com/r.iyyappan.566"><span class="bi bi-facebook"></span></a>
+            <a href="https://www.instagram.com/iam__manii__/"><span class="bi bi-instagram"></span></a>
+            <a href="https://www.linkedin.com/in/iyyappan-r-b33681279/"><span class="bi bi-telegram" style="color: #27ae60;"></span></a>
+            <a href="https://www.youtube.com/"><span class="bi bi-youtube" ></span></a>
+            <a href="https://web.whatsapp.com/"><span class="bi bi-whatsapp" style="color: aqua;"></span></a>
+            <span>Terms of Use</span>
+            <span>Privacy Policy</span>  
+            <span> © 2006-2023 Wix.com, Inc</span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Iyyappan. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+
+    <script></script>
+</body>
+</html>
